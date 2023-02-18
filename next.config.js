@@ -3,6 +3,14 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/blogs",
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siZenn } from "simple-icons";
 
 /**
  * Application Base Header
@@ -11,7 +12,30 @@ export const Header: React.FC = () => {
       <nav role="navigation" className="flex gap-4">
         <Link href="/blogs">Blogs</Link>
         <Link href="/scraps">Scraps</Link>
-        <Link href="/">AboutMe</Link>
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://zenn.dev/dimdim1996"
+        >
+          <div className="flex items-center">
+            <svg
+              height={14}
+              width={14}
+              viewBox="0 0 24 24"
+              className="fill-[#3EA8FF]"
+            >
+              <path d={siZenn.path} />
+            </svg>
+            Zenn
+          </div>
+        </Link>
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://almondine-ground-128.notion.site/Profile-51516a23c81f4b0fa43760ae6d33f6db"
+        >
+          AboutMe
+        </Link>
       </nav>
     </header>
   );
