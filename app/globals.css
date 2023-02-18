@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-sm;
+    @apply bg-slate-50;
+    @apply dark:bg-slate-900;
+    @apply text-slate-900;
+    @apply dark:text-slate-50;
+    @apply leading-relaxed;
+  }
+
+  /* https://unstoppablerobotninja.com/entry/fluid-images/ */
+  img {
+    @apply max-w-full;
+  }
+
+  iflrame {
+    @apply max-w-full;
+  }
+}
