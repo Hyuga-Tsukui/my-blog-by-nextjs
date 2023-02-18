@@ -36,12 +36,12 @@ export async function getBlogContent({ id }: { id: string }) {
     queries: { ids: id },
   });
 
-  if (!response) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
+  // if (!response.contents.length) {
+  //   // This will activate the closest `error.js` Error Boundary
+  //   throw new Error("Failed to fetch data");
+  // }
   // TODO CMSのAPI仕様で配列になってしまう
-  return response.contents[0];
+  return response.contents[0] || { title: "", content: "", publishedAt: "" };
 }
 
 /**
