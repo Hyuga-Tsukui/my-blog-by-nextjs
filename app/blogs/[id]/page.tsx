@@ -14,7 +14,7 @@ export default async function BlogContent({ params: { id } }: Props) {
   const blog = await getBlogContent({ id });
   return (
     <div className="flex items-center justify-center px-4">
-      <article>
+      <article className="w-[80%]">
         <div className="rounded border border-solid bg-slate-100 p-4 shadow  dark:bg-slate-800">
           <small>
             公開：

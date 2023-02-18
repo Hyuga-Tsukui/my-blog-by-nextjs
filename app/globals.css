@@ -14,10 +14,10 @@
 
   /* https://unstoppablerobotninja.com/entry/fluid-images/ */
   img {
-    @apply max-w-full;
+    @apply max-w-[80%];
   }
 
   iflrame {
-    @apply max-w-full;
+    @apply max-w-[80%];
   }
 }
