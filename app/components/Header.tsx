@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
       <h1 className="text-2xl">Hyuga.dev</h1>
       <nav role="navigation" className="flex gap-4">
         <Link href="/blogs">Blogs</Link>
-        <Link href="/">ScrapBox</Link>
+        <Link href="/scraps">Scraps</Link>
         <Link href="/">AboutMe</Link>
       </nav>
     </header>

@@ -1,5 +1,5 @@
 import { createClient } from "microcms-js-sdk";
-import { GetBlogContentApi, GetBlogsApi } from "./types";
+import { GetBlogContentApi, GetBlogsApi, ScrapboxObject } from "./types";
 
 /**
  * Get BlogIndex from CMS
@@ -42,4 +42,20 @@ export async function getBlogContent({ id }: { id: string }) {
   }
   // TODO CMSのAPI仕様で配列になってしまう
   return response.contents[0];
+}
+
+/**
+ * Get ScrapBoxList
+ */
+export async function getScrapBox() {
+  const response = await fetch("https://scrapbox.io/api/pages/hyuga-tsukui");
+
+  if (!response.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch scrapbox data");
+  }
+
+  const scrapboxObject = (await response.json()) as ScrapboxObject;
+
+  return scrapboxObject;
 }

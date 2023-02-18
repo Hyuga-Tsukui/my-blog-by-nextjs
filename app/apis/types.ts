@@ -24,3 +24,13 @@ export type GetBlogsApi = {
 export type GetBlogContentApi = {
   contents: Blog[];
 };
+
+export type ScrapboxObject = {
+  pages: {
+    id: string;
+    title: string;
+    descriptions: string;
+    created: string;
+    updated: string;
+  }[];
+};
